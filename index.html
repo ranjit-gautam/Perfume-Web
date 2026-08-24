@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RG Shop | Luxury Perfumes & Extrait de Parfum</title>
+  <meta name="description" content="Welcome to RG Shop. Explore our curated collection of luxury scents and perfumes, crafted with architectural precision and contemporary elegance.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>RG</text></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar (Subtle Luxury) -->
+  <div class="top-notice">
+    <span>Complimentary worldwide express shipping on orders over €150 • 2 Free 2ml Discovery Vials Included</span>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="site-header" id="main-header">
+    <div class="container header-inner">
+      
+      <!-- Left Navigation -->
+      <nav class="nav-left" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active" id="nav-fragrances">Fragrances</a>
+        <a href="collections.html" class="nav-link" id="nav-collections">Collections</a>
+        <a href="atelier.html" class="nav-link" id="nav-atelier">The Atelier</a>
+      </nav>
+
+      <!-- Mobile Menu Trigger -->
+      <button type="button" class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+
+      <!-- Center Brand Logo -->
+      <a href="index.html" class="site-logo" id="site-logo">RG Shop</a>
+
+      <!-- Right Navigation Actions -->
+      <div class="nav-right">
+        <!-- Search Trigger -->
+        <button type="button" class="icon-btn" id="search-trigger-btn" aria-label="Search Fragrances">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Wishlist / Saved Scents Trigger -->
+        <button type="button" class="icon-btn" id="wishlist-trigger-btn" aria-label="View Saved Scents">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="cart-badge" id="wishlist-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Cart Bag Trigger -->
+        <button type="button" class="icon-btn" id="cart-trigger-btn" aria-label="View Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <path d="M3 6h18"></path>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cart-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Customer Account / Concierge -->
+        <a href="atelier.html#appointment" class="icon-btn" id="account-btn" aria-label="Atelier Consultation & Profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content Body -->
+  <main>
+    
+    <!-- Hero / Flagship Welcome Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="hero-editorial-grid">
+          
+          <!-- Left: Editorial Brand Story & Action Controls -->
+          <div class="hero-editorial-content">
+            <div class="hero-welcome-badge">
+              <span>✨ Haute Parfumerie • 28% Extrait de Parfum</span>
+            </div>
+            
+            <h1 class="hero-title" id="page-title">Welcome Here to RG Shop</h1>
+            
+            <p class="hero-subtitle">
+              An architectural approach to high perfumery. Handcrafted perfumes compounded with 28% pure botanical essences, barrel-matured for 90 days in our atelier to achieve magnetic, all-day skin projection.
+            </p>
+
+            <!-- Store Highlights Pills -->
+            <div class="hero-store-pills">
+              <div class="hero-store-pill-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>28% Pure Extrait</span>
+              </div>
+              <div class="hero-store-pill-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>2 Free Discovery Vials</span>
+              </div>
+              <div class="hero-store-pill-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Free Express Shipping</span>
+              </div>
+            </div>
+
+            <!-- Quick Action CTAs -->
+            <div class="hero-cta-group">
+              <a href="#fragrance-catalog" class="hero-btn-primary" id="hero-shop-btn">
+                <span>Explore Perfumes</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 13l5 5 5-5M12 4v14"/>
+                </svg>
+              </a>
+              <a href="#about-store" class="hero-btn-secondary" id="hero-about-btn">
+                <span>Shop Story</span>
+              </a>
+            </div>
+
+            <!-- Featured Olfactory Notes Strip -->
+            <div class="hero-notes-palette" aria-label="Signature Olfactory Palette">
+              <span class="hero-palette-label">Key Notes:</span>
+              <button type="button" class="hero-note-chip" data-filter-note="Haitian Vetiver">Haitian Vetiver</button>
+              <button type="button" class="hero-note-chip" data-filter-note="Grasse Jasmine">Grasse Jasmine</button>
+              <button type="button" class="hero-note-chip" data-filter-note="Calabrian Bergamot">Calabrian Bergamot</button>
+              <button type="button" class="hero-note-chip" data-filter-note="Australian Sandalwood">Sandalwood</button>
+            </div>
+          </div>
+
+          <!-- Right: Signature Photo Showcase Stage -->
+          <div class="hero-visual-stage">
+            <div class="hero-store-card">
+              <img 
+                src="assets/rg_shop_hero.jpg" 
+                alt="RG Shop - Signature Portrait" 
+                class="hero-store-img"
+                onerror="this.onerror=null;this.src='src/assets/images/rg_shop_founder_1787597906641.jpg';"
+              />
+            </div>
+            <div class="hero-store-caption">
+              <div class="hero-store-caption-title">RG Shop • Haute Parfumerie</div>
+              <div class="hero-store-caption-sub">Madrid Atelier & Paris • Worldwide Dispatch</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- E-Commerce Trust Badges Strip -->
+    <div class="trust-strip">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="trust-title">Free Express Shipping</div>
+              <div class="trust-desc">Worldwide DHL delivery on orders over €150</div>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <div>
+              <div class="trust-title">2 Free Discovery Vials</div>
+              <div class="trust-desc">Try on skin before opening the main flacon</div>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="trust-title">30-Day Guarantee</div>
+              <div class="trust-desc">Complimentary returns & seamless exchange</div>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div>
+              <div class="trust-title">Master Atelier Craft</div>
+              <div class="trust-desc">28% Extrait concentration for 12+ hour sillage</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT & WELCOME TO OUR STORE SECTION -->
+    <section class="about-welcome-section" id="about-store">
+      <div class="container">
+        <div class="about-welcome-grid">
+          
+          <!-- Visual Media Card -->
+          <div class="about-media-wrapper">
+            <img 
+              src="assets/rg_shop_hero.jpg" 
+              alt="RG Shop - Signature Portrait" 
+              class="about-main-image"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='src/assets/images/rg_shop_founder_1787597906641.jpg';"
+            />
+          </div>
+
+          <!-- Editorial Welcome & About Narrative -->
+          <div class="about-welcome-content">
+            <span class="about-eyebrow">About & Welcome to Our Shop</span>
+            <h2 class="about-title">Welcome Here to RG Shop — Scent as Haute Architecture</h2>
+            
+            <p class="about-intro-text">
+              <strong>RG Shop</strong> was conceived to redefine modern luxury fragrance. We reject mass-market synthetic fillers in favor of raw botanical distillation, architectural balance, and uncompromising longevity.
+            </p>
+
+            <p class="about-sub-text">
+              Every flacon in our collection is an intimate composition of cold-pressed citrus, smoky wild woods, and hand-harvested florals. Whether you are discovering your everyday signature or seeking an enigmatic evening extrait, RG Shop offers an elevated sensory journey with risk-free skin sampling.
+            </p>
+
+            <!-- 3 Store Quality Pillars -->
+            <div class="welcome-pillars-grid">
+              <div class="welcome-pillar-card">
+                <div class="welcome-pillar-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                  </svg>
+                </div>
+                <div class="welcome-pillar-title">28% Pure Extrait</div>
+                <p class="welcome-pillar-desc">Maximum concentration for 12+ hours of consistent, evolving projection on skin.</p>
+              </div>
+
+              <div class="welcome-pillar-card">
+                <div class="welcome-pillar-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                  </svg>
+                </div>
+                <div class="welcome-pillar-title">Free Test Vials</div>
+                <p class="welcome-pillar-desc">Test with 2 free 2ml vials before unsealing your full-sized bottle.</p>
+              </div>
+
+              <div class="welcome-pillar-card">
+                <div class="welcome-pillar-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                </div>
+                <div class="welcome-pillar-title">Express Delivery</div>
+                <p class="welcome-pillar-desc">DHL Express insured courier delivery dispatched directly to your doorstep.</p>
+              </div>
+            </div>
+
+            <!-- Founder Quote -->
+            <div class="welcome-quote-box">
+              <div class="welcome-quote-text">
+                "Fragrance should not merely mask who you are — it should construct the invisible atmosphere and lingering memory you leave in every room."
+              </div>
+              <div class="welcome-quote-author">
+                — Ranjit Gautam, Founder & Nose
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="about-actions">
+              <a href="#fragrance-catalog" class="hero-btn-primary" style="padding: 0.75rem 1.4rem; font-size: 0.8rem;">
+                Browse All Extraits
+              </a>
+              <a href="atelier.html" class="hero-btn-secondary" style="padding: 0.75rem 1.4rem; font-size: 0.8rem;">
+                Visit The Atelier
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog Explorer (Sidebar + Grid) -->
+    <section class="catalog-section" id="fragrance-catalog">
+      <div class="container">
+
+        <!-- Mobile Filter Bar (Visible only on small screens) -->
+        <div class="mobile-filter-bar">
+          <button type="button" class="mobile-filter-trigger" id="mobile-filter-trigger">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <line x1="4" y1="21" x2="4" y2="14"></line>
+              <line x1="4" y1="10" x2="4" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12" y2="3"></line>
+              <line x1="20" y1="21" x2="20" y2="16"></line>
+              <line x1="20" y1="12" x2="20" y2="3"></line>
+              <line x1="1" y1="14" x2="7" y2="14"></line>
+              <line x1="9" y1="8" x2="15" y2="8"></line>
+              <line x1="17" y1="16" x2="23" y2="16"></line>
+            </svg>
+            <span>Filter Fragrances</span>
+            <span class="filter-count-badge" id="mobile-filter-count" style="display: none;">0</span>
+          </button>
+          <span style="font-size: 0.8rem; color: var(--text-secondary);">Artisan Extraits</span>
+        </div>
+
+        <div class="catalog-layout">
+          
+          <!-- Filters Sidebar (Left) -->
+          <aside class="filters-sidebar" id="filters-sidebar">
+            
+            <!-- Scent Family Filter (Default All so all products show) -->
+            <div class="filter-group">
+              <h3 class="filter-heading">SCENT FAMILY</h3>
+              <div class="scent-family-grid">
+                <button type="button" class="filter-pill active" data-family="all">All</button>
+                <button type="button" class="filter-pill" data-family="Floral">Floral</button>
+                <button type="button" class="filter-pill" data-family="Woody">Woody</button>
+                <button type="button" class="filter-pill" data-family="Citrus">Citrus</button>
+                <button type="button" class="filter-pill" data-family="Amber">Amber</button>
+              </div>
+            </div>
+
+            <!-- Occasion Filter (Default All Occasions) -->
+            <div class="filter-group">
+              <h3 class="filter-heading">OCCASION</h3>
+              <div class="radio-list">
+                <label class="radio-item">
+                  <input type="radio" name="occasion" value="all" checked>
+                  <span class="custom-radio"></span>
+                  <span class="radio-label">All Occasions</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="occasion" value="Daytime">
+                  <span class="custom-radio"></span>
+                  <span class="radio-label">Daytime</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="occasion" value="Evening">
+                  <span class="custom-radio"></span>
+                  <span class="radio-label">Evening</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="occasion" value="Signature">
+                  <span class="custom-radio"></span>
+                  <span class="radio-label">Signature</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Intensity Filter -->
+            <div class="filter-group">
+              <h3 class="filter-heading">INTENSITY</h3>
+              <div class="intensity-control">
+                <input type="range" min="0" max="3" value="0" step="1" class="intensity-slider" id="intensity-slider" aria-label="Scent Intensity">
+                <div class="intensity-labels">
+                  <span class="intensity-label active" data-intensity="0">All</span>
+                  <span class="intensity-label" data-intensity="1">Light</span>
+                  <span class="intensity-label" data-intensity="2">Medium</span>
+                  <span class="intensity-label" data-intensity="3">Intense</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Scent Matcher Guide Link -->
+            <div style="padding-top: 0.5rem;">
+              <a href="atelier.html" style="font-size: 0.8125rem; color: var(--text-secondary); text-decoration: underline;">
+                Discover our Bespoke Formulation Atelier →
+              </a>
+            </div>
+
+          </aside>
+
+          <!-- Products Container (Right) -->
+          <div class="products-container">
+            
+            <!-- E-Commerce Catalog Toolbar (Product Count, Sorting, Active Filter Chips) -->
+            <div class="catalog-toolbar">
+              <div class="catalog-toolbar-left">
+                <span class="catalog-count" id="catalog-count">Showing all 6 luxury fragrances</span>
+                <div class="active-filter-chips" id="active-filter-chips"></div>
+              </div>
+
+              <div class="catalog-toolbar-right">
+                <div class="sort-wrapper">
+                  <label for="sort-select" class="sort-label">Sort By:</label>
+                  <select id="sort-select" class="sort-select" aria-label="Sort Fragrances">
+                    <option value="featured">Featured Atelier</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Name (A-Z)</option>
+                  </select>
+                </div>
+
+                <div class="view-toggle-btns" aria-label="Layout Grid Toggle">
+                  <button type="button" class="view-toggle-btn active" data-cols="2" aria-label="2 Columns View">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="3" width="7" height="18"></rect>
+                      <rect x="14" y="3" width="7" height="18"></rect>
+                    </svg>
+                  </button>
+                  <button type="button" class="view-toggle-btn" data-cols="3" aria-label="3 Columns View">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="5" height="18"></rect>
+                      <rect x="9.5" y="3" width="5" height="18"></rect>
+                      <rect x="17" y="3" width="5" height="18"></rect>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Products Grid (All items and photos rendered here) -->
+            <div class="products-grid" id="products-grid">
+              <!-- Products dynamically injected via js/main.js -->
+            </div>
+
+            <!-- DEDICATED ORDER SECTION BELOW PRODUCTS LIST -->
+            <div class="order-section-below-products" id="quick-order-section">
+              <div class="order-section-header">
+                <div class="order-section-title-wrap">
+                  <div class="order-icon-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="order-section-title">Express Direct Order</h3>
+                    <p class="order-section-subtitle">Select any fragrance and order in seconds with complimentary worldwide DHL Express delivery</p>
+                  </div>
+                </div>
+                <div style="font-size: 0.8rem; font-weight: 600; color: var(--accent-gold); letter-spacing: 0.05em; text-transform: uppercase;">
+                  ⚡ Instant 1-Click Checkout Available
+                </div>
+              </div>
+
+              <div class="order-section-body">
+                <div class="order-builder-grid">
+                  <!-- Left: Fast Selector -->
+                  <div class="order-picker-box">
+                    <div class="order-field-group">
+                      <label for="direct-fragrance-select" class="order-field-label">1. Choose Fragrance Flacon</label>
+                      <select id="direct-fragrance-select" class="order-select" aria-label="Select Fragrance for Instant Order">
+                        <!-- Populated by JS -->
+                      </select>
+                    </div>
+
+                    <div class="order-field-group">
+                      <label class="order-field-label">2. Select Flacon Volume</label>
+                      <div class="order-size-options" id="direct-size-options">
+                        <button type="button" class="order-size-btn active" data-size="50ml">50ml Standard Flacon</button>
+                        <button type="button" class="order-size-btn" data-size="100ml">100ml Grand Flacon</button>
+                      </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                      <div class="order-field-group" style="flex: 1;">
+                        <label class="order-field-label">3. Quantity</label>
+                        <div class="qty-stepper" style="background: var(--bg-surface); width: fit-content; padding: 0.25rem 0.5rem;">
+                          <button type="button" class="qty-btn" id="direct-qty-minus">-</button>
+                          <span class="qty-val" id="direct-qty-val">1</span>
+                          <button type="button" class="qty-btn" id="direct-qty-plus">+</button>
+                        </div>
+                      </div>
+                      <div style="flex: 1.5; font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">
+                        ✓ 2 Free 2ml Discovery Vials included with every order.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Right: Summary & Order Button -->
+                  <div class="order-summary-card">
+                    <div>
+                      <div class="order-summary-header">
+                        <img id="direct-preview-img" src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1000&auto=format&fit=crop" alt="Fragrance preview" class="order-summary-img">
+                        <div class="order-summary-info">
+                          <h4 id="direct-preview-name">Averon Extrait de Parfum</h4>
+                          <p id="direct-preview-spec">Extrait de Parfum • 50ml</p>
+                          <div style="color: #2e7d32; font-size: 0.725rem; font-weight: 500; margin-top: 0.2rem;">● Dispatches Today via DHL Express</div>
+                        </div>
+                      </div>
+
+                      <div class="order-cost-breakdown">
+                        <div class="order-cost-row">
+                          <span>Unit Price:</span>
+                          <span id="direct-unit-price">€195</span>
+                        </div>
+                        <div class="order-cost-row">
+                          <span>Worldwide Express Shipping:</span>
+                          <span style="color: #2e7d32; font-weight: 500;">FREE</span>
+                        </div>
+                        <div class="order-cost-row">
+                          <span>2 Discovery Samples:</span>
+                          <span style="color: #2e7d32; font-weight: 500;">FREE (€0)</span>
+                        </div>
+                        <div class="order-cost-row total">
+                          <span>Order Total:</span>
+                          <span id="direct-total-price">€195</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <button type="button" class="btn-instant-order" id="btn-direct-order-action">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                          <path d="M3 6h18"></path>
+                          <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <span id="btn-direct-order-text">Place Order Now • €195</span>
+                      </button>
+
+                      <div class="order-perks-list">
+                        <div class="order-perk-item">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                          <span>30-Day Free Return Guarantee</span>
+                        </div>
+                        <div class="order-perk-item">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                          <span>Secure Card & Apple Pay</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- View All Fragrances Action Button -->
+            <div class="view-all-wrapper" style="margin-top: 1.5rem;">
+              <button type="button" class="btn-outline" id="view-all-btn">
+                Reset All Filters
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer (With Facebook instead of Pinterest, Clean Brand) -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      
+      <div class="footer-main">
+        
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">RG Shop</a>
+          <p class="footer-bio">
+            Crafting olfactory memories through luxury minimalism and 28% pure extrait concentration.
+          </p>
+          <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.75rem;">
+            Location: Madrid, Spain • Calle de Serrano 48
+          </p>
+        </div>
+
+        <!-- Explore Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="atelier.html">The Atelier</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="atelier.html#sustainability">Sustainability</a></li>
+            <li><a href="collections.html#press">Press</a></li>
+          </ul>
+        </div>
+
+        <!-- Support Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="atelier.html#contact">Concierge & Contact</a></li>
+            <li><a href="checkout.html">Orders & Tracking</a></li>
+            <li><a href="checkout.html">Complimentary Samples</a></li>
+            <li><a href="checkout.html">Shipping & Returns</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Newsletter</h4>
+          <form class="newsletter-form" id="newsletter-form">
+            <div class="newsletter-input-group">
+              <input type="email" class="newsletter-input" placeholder="YOUR EMAIL" required aria-label="Enter your email for newsletter">
+              <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe to newsletter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+            <p class="newsletter-feedback" id="newsletter-feedback">Welcome to the inner circle of RG Shop.</p>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>© 2024 RG Shop. Owned by Ranjit Gautam. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer (E-Commerce Enhanced) -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Bag">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Olfactory Selection</h3>
+      <button type="button" class="icon-btn" id="cart-close-btn" aria-label="Close Bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Bar -->
+    <div class="free-shipping-meter">
+      <div class="free-shipping-text" id="free-shipping-text-status">
+        <span>Add €150 for Free Worldwide Express Delivery</span>
+        <span>0%</span>
+      </div>
+      <div class="free-shipping-bar-bg">
+        <div class="free-shipping-bar-fill" id="free-shipping-bar-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <div class="cart-items-list" id="cart-items-list">
+      <!-- Items dynamically populated -->
+    </div>
+
+    <div class="cart-footer">
+      <!-- Coupon Code Box -->
+      <div class="cart-coupon-group">
+        <input type="text" class="cart-coupon-input" id="cart-coupon-input" placeholder="PROMO CODE (e.g. RG10)">
+        <button type="button" class="cart-coupon-btn" id="cart-coupon-btn">Apply</button>
+      </div>
+
+      <div id="cart-discount-row" class="cart-discount-row" style="display: none;">
+        <span>Promo Discount</span>
+        <span id="cart-discount-amount">-€0</span>
+      </div>
+
+      <div class="cart-subtotal-row" style="margin-top: 0.75rem;">
+        <span>Subtotal</span>
+        <span class="cart-subtotal-price" id="cart-subtotal-price">€0</span>
+      </div>
+      <p class="cart-shipping-note">Taxes & duties included. Complimentary 2ml discovery vials with every flacon.</p>
+      
+      <a href="checkout.html" class="btn-checkout" id="cart-checkout-btn">
+        Proceed to Checkout
+      </a>
+
+      <!-- Security / Payment Trust Badges -->
+      <div class="cart-security-badges">
+        <span>🔒 256-Bit SSL</span>
+        <span>•</span>
+        <span>DHL Express</span>
+        <span>•</span>
+        <span>Apple Pay & Cards</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Slide-out Wishlist / Saved Scents Drawer -->
+  <aside class="wishlist-drawer" id="wishlist-drawer" aria-label="Saved Scents">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Saved Fragrances</h3>
+      <button type="button" class="icon-btn" id="wishlist-close-btn" aria-label="Close Wishlist">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="wishlist-items-list" id="wishlist-items-list">
+      <!-- Items dynamically populated -->
+    </div>
+  </aside>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <nav class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <span class="site-logo" style="position: static; transform: none;">RG Shop</span>
+      <button type="button" class="icon-btn" id="mobile-nav-close-btn" aria-label="Close Mobile Navigation">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link active">Fragrances</a>
+      <a href="collections.html" class="mobile-nav-link">Collections</a>
+      <a href="atelier.html" class="mobile-nav-link">The Atelier</a>
+      <a href="checkout.html" class="mobile-nav-link">Checkout & Orders</a>
+    </div>
+
+    <div style="margin-top: auto; padding-top: 2rem; border-top: 1px solid var(--border-light);">
+      <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Location: Madrid, Spain • Calle de Serrano 48</p>
+      <p style="font-size: 0.8rem; color: var(--text-secondary);">concierge@rgshop.com</p>
+    </div>
+  </nav>
+
+  <!-- Search Modal Overlay -->
+  <div class="search-modal-overlay" id="search-overlay">
+    <div class="search-modal-container">
+      <div class="search-modal-header">
+        <button type="button" class="icon-btn" id="search-close-btn" aria-label="Close Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="search-input-wrapper">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" color="var(--text-muted)">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" class="search-input-field" id="search-input" placeholder="Search by note, scent family, or name..." autocomplete="off">
+      </div>
+
+      <div class="search-results-area">
+        <div class="search-results-grid" id="search-results-grid">
+          <!-- Live results appear here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="quick-view-overlay" id="quick-view-overlay">
+    <div class="quick-view-modal" id="quick-view-modal">
+      <button type="button" class="quick-view-close" id="quick-view-close-btn" aria-label="Close Quick View">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="quick-view-content" id="quick-view-content">
+        <!-- Quick View injected here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

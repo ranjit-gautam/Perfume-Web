@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collections | RG Shop</title>
+  <meta name="description" content="Explore the bespoke collections of RG Shop. Curated olfactory architectures crafted in our artisan atelier.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .collections-hero {
+      padding: 4rem 0 3rem 0;
+      text-align: center;
+    }
+    .collections-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      margin-bottom: 5rem;
+    }
+    @media (min-width: 768px) {
+      .collections-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+      }
+    }
+    .collection-card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .collection-image-wrapper {
+      position: relative;
+      background-color: var(--bg-card);
+      aspect-ratio: 16 / 11;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .collection-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+    .collection-card:hover .collection-image-wrapper img {
+      transform: scale(1.05);
+    }
+    .collection-tag {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(255, 255, 255, 0.92);
+      padding: 0.35rem 0.75rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      backdrop-filter: blur(4px);
+    }
+    .collection-title {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    .collection-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 1rem;
+    }
+    .collection-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-notice">
+    <span>Complimentary worldwide express shipping on orders over €150</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <nav class="nav-left" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link" id="nav-fragrances">Fragrances</a>
+        <a href="collections.html" class="nav-link active" id="nav-collections">Collections</a>
+        <a href="atelier.html" class="nav-link" id="nav-atelier">The Atelier</a>
+      </nav>
+
+      <button type="button" class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+
+      <a href="index.html" class="site-logo">RG Shop</a>
+
+      <div class="nav-right">
+        <button type="button" class="icon-btn" id="search-trigger-btn" aria-label="Search Fragrances">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <button type="button" class="icon-btn" id="cart-trigger-btn" aria-label="View Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <path d="M3 6h18"></path>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cart-badge" style="display: none;">0</span>
+        </button>
+
+        <a href="atelier.html#appointment" class="icon-btn" aria-label="Atelier Consultation">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="collections-hero">
+      <div class="container">
+        <h1 class="hero-title">Collections</h1>
+        <p class="hero-subtitle">
+          Thematic chapters in contemporary perfumery, blending raw Iberian resins, rare botanical extraits, and architectural symmetry.
+        </p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="collections-grid">
+        
+        <!-- Collection 1 -->
+        <article class="collection-card">
+          <div class="collection-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1000&auto=format&fit=crop" alt="The Architectural Series">
+            <span class="collection-tag">Core Atelier</span>
+          </div>
+          <h2 class="collection-title">The Architectural Series</h2>
+          <p class="collection-desc">
+            Sculpted around brutalist stone geometry, smoky vetivers, and mineral silences. Formulations designed with clean angular silhouettes.
+          </p>
+          <a href="index.html" class="collection-cta">Explore Series →</a>
+        </article>
+
+        <!-- Collection 2 -->
+        <article class="collection-card">
+          <div class="collection-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=1000&auto=format&fit=crop" alt="Atelier Private Harvest Blend">
+            <span class="collection-tag">Private Harvest</span>
+          </div>
+          <h2 class="collection-title">Atelier Private Harvest Blend</h2>
+          <p class="collection-desc">
+            Ultra-concentrated extraits de parfum utilizing rare botanicals harvested along the Iberian coast and aged in French oak vats.
+          </p>
+          <a href="index.html" class="collection-cta">Explore Extraits →</a>
+        </article>
+
+        <!-- Collection 3 -->
+        <article class="collection-card">
+          <div class="collection-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=1000&auto=format&fit=crop" alt="Evening Silhouettes">
+            <span class="collection-tag">Nocturne</span>
+          </div>
+          <h2 class="collection-title">Evening Silhouettes</h2>
+          <p class="collection-desc">
+            Golden ambergris, roasted tonka bean, and night-blooming jasmine formulated for memorable nocturnal presence.
+          </p>
+          <a href="index.html" class="collection-cta">Explore Evening Scents →</a>
+        </article>
+
+        <!-- Collection 4 -->
+        <article class="collection-card">
+          <div class="collection-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=1000&auto=format&fit=crop" alt="The Discovery Coffret">
+            <span class="collection-tag">Complimentary Voucher Included</span>
+          </div>
+          <h2 class="collection-title">The Discovery Coffret</h2>
+          <p class="collection-desc">
+            Five 5ml flacons representing our signature spectrum. Includes an exclusive €48 voucher redeemable towards any full 50ml or 100ml bottle.
+          </p>
+          <a href="product.html?id=averon" class="collection-cta">Discover Coffret (€48) →</a>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">RG Shop</a>
+          <p class="footer-bio">Crafting olfactory memories through luxury minimalism and heritage.</p>
+          <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.75rem;">
+            Location: Madrid, Spain • Calle de Serrano 48
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="atelier.html">The Atelier</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="atelier.html#sustainability">Sustainability</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links">
+            <li><a href="atelier.html#contact">Contact</a></li>
+            <li><a href="checkout.html#shipping">Shipping</a></li>
+            <li><a href="checkout.html#returns">Returns</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Newsletter</h4>
+          <form class="newsletter-form" id="newsletter-form">
+            <div class="newsletter-input-group">
+              <input type="email" class="newsletter-input" placeholder="YOUR EMAIL" required>
+              <button type="submit" class="newsletter-submit-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+            <p class="newsletter-feedback" id="newsletter-feedback">Welcome to the inner circle of RG Shop.</p>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 RG Shop. Owned by Ranjit Gautam. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart & Modals -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Olfactory Selection</h3>
+      <button type="button" class="icon-btn" id="cart-close-btn">✕</button>
+    </div>
+    <div class="cart-items-list" id="cart-items-list"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span class="cart-subtotal-price" id="cart-subtotal-price">€0</span>
+      </div>
+      <p class="cart-shipping-note">Taxes & duties included. Complimentary express shipping worldwide.</p>
+      <a href="checkout.html" class="btn-checkout">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <nav class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="site-logo">RG Shop</span>
+      <button type="button" class="icon-btn" id="mobile-nav-close-btn">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Fragrances</a>
+      <a href="collections.html" class="mobile-nav-link active">Collections</a>
+      <a href="atelier.html" class="mobile-nav-link">The Atelier</a>
+      <a href="checkout.html" class="mobile-nav-link">Checkout</a>
+    </div>
+  </nav>
+
+  <!-- Search Modal -->
+  <div class="search-modal-overlay" id="search-overlay">
+    <div class="search-modal-container">
+      <div class="search-modal-header">
+        <button type="button" class="icon-btn" id="search-close-btn">✕</button>
+      </div>
+      <div class="search-input-wrapper">
+        <input type="text" class="search-input-field" id="search-input" placeholder="Search by note, scent family, or name...">
+      </div>
+      <div class="search-results-area">
+        <div class="search-results-grid" id="search-results-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

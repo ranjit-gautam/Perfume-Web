@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | RG Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .checkout-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding: 3.5rem 0 5rem 0;
+    }
+    @media (min-width: 880px) {
+      .checkout-layout {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 4rem;
+      }
+    }
+    .checkout-form-section {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      padding: 2.5rem 2rem;
+    }
+    .checkout-summary-section {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border-light);
+      padding: 2.5rem 2rem;
+      position: sticky;
+      top: 6rem;
+    }
+    .section-step-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-light);
+      font-weight: 500;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 0.85rem;
+      border: 1px solid var(--border-light);
+      background-color: var(--bg-primary);
+      font-size: 0.875rem;
+      outline: none;
+    }
+    .sample-pill-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .sample-chip {
+      border: 1px solid var(--border-light);
+      padding: 0.65rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #FFF;
+    }
+    .sample-chip.selected {
+      border-color: var(--text-primary);
+      background-color: var(--bg-card);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement -->
+  <div class="top-notice">
+    <span>Complimentary DHL Express Worldwide Delivery & Tax Duty Paid</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <nav class="nav-left">
+        <a href="index.html" class="nav-link">Fragrances</a>
+        <a href="collections.html" class="nav-link">Collections</a>
+        <a href="atelier.html" class="nav-link">The Atelier</a>
+      </nav>
+
+      <a href="index.html" class="site-logo">RG Shop</a>
+
+      <div class="nav-right">
+        <a href="index.html" style="font-size: 0.85rem; color: var(--text-secondary);">← Return to Shop</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="checkout-layout">
+      
+      <!-- Checkout Form (Left) -->
+      <div class="checkout-form-section">
+        <h2 class="section-step-title">1. Express Shipping Destination</h2>
+        
+        <form id="checkout-form">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-input" required placeholder="Alexander">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-input" required placeholder="Vane">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Email Address (For Courier Tracking)</label>
+            <input type="email" class="form-input" required placeholder="alexander@domain.com">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Delivery Address</label>
+            <input type="text" class="form-input" required placeholder="Apartment, Street Name, Suite">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label">City</label>
+              <input type="text" class="form-input" required placeholder="Madrid">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Postal Code</label>
+              <input type="text" class="form-input" required placeholder="28001">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Country</label>
+              <input type="text" class="form-input" required placeholder="Spain">
+            </div>
+          </div>
+
+          <h2 class="section-step-title" style="margin-top: 2rem;">2. Choose 2 Complimentary Discovery Samples (2ml)</h2>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 1rem;">Included with your order in protective linen pouch:</p>
+
+          <div class="sample-pill-grid">
+            <label class="sample-chip selected">
+              <input type="checkbox" checked name="samples" value="Averon" style="accent-color: #000;">
+              <span>Averon (Woody Vetiver)</span>
+            </label>
+            <label class="sample-chip selected">
+              <input type="checkbox" checked name="samples" value="Lumera" style="accent-color: #000;">
+              <span>Lumera (Bergamot & Jasmine)</span>
+            </label>
+            <label class="sample-chip">
+              <input type="checkbox" name="samples" value="Santal Noir" style="accent-color: #000;">
+              <span>Santal Noir (Cardamom Sandalwood)</span>
+            </label>
+            <label class="sample-chip">
+              <input type="checkbox" name="samples" value="Ambre Celeste" style="accent-color: #000;">
+              <span>Ambre Céleste (Spanish Labdanum)</span>
+            </label>
+          </div>
+
+          <h2 class="section-step-title" style="margin-top: 2rem;">3. Payment Method</h2>
+          <div style="border: 1px solid var(--border-light); padding: 1.25rem; margin-bottom: 2rem; background-color: var(--bg-primary);">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+              <input type="radio" checked id="pay-card" name="pay-method" style="accent-color: #000;">
+              <label for="pay-card" style="font-weight: 500; font-size: 0.9rem;">Credit / Debit Card (Encrypted via Stripe)</label>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="4532 •••• •••• 8892" value="4532 9182 7731 8892">
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <input type="text" class="form-input" placeholder="MM/YY" value="08/28">
+              <input type="text" class="form-input" placeholder="CVV" value="384">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-checkout" id="place-order-btn" style="padding: 1.25rem; font-size: 0.95rem;">
+            Authorize & Complete Order
+          </button>
+        </form>
+      </div>
+
+      <!-- Order Summary (Right) -->
+      <div class="checkout-summary-section">
+        <h3 class="cart-title" style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.75rem;">
+          Order Summary
+        </h3>
+
+        <div id="checkout-items-list" style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+          <!-- Populated from state -->
+        </div>
+
+        <div style="border-top: 1px solid var(--border-light); padding-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+            <span>Subtotal</span>
+            <span id="co-subtotal">€0</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: #2e7d32;">
+            <span>Express Courier</span>
+            <span>Free</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+            <span>Duties & Taxes</span>
+            <span>Included</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 1.15rem; font-weight: 600; margin-top: 0.5rem; border-top: 1px solid var(--border-light); padding-top: 0.75rem;">
+            <span>Total</span>
+            <span id="co-total">€0</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2024 RG Shop. Owned by Ranjit Gautam. All Rights Reserved. Location: Madrid, Spain</p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cart = JSON.parse(localStorage.getItem('rg_shop_cart') || '[]');
+      const itemsList = document.getElementById('checkout-items-list');
+      const subtotalEl = document.getElementById('co-subtotal');
+      const totalEl = document.getElementById('co-total');
+
+      if (cart.length === 0) {
+        // Provide sample item if empty
+        cart.push({
+          id: "averon",
+          name: "Averon",
+          subtitle: "Smoky vetiver and dark patchouli.",
+          size: "50ml",
+          price: 195,
+          image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1000&auto=format&fit=crop",
+          quantity: 1
+        });
+      }
+
+      let subtotal = 0;
+      itemsList.innerHTML = cart.map(item => {
+        const itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+        return `
+          <div style="display: flex; gap: 1rem; align-items: center;">
+            <img src="${item.image}" style="width: 50px; height: 60px; object-fit: cover; background: var(--bg-card);">
+            <div style="flex: 1;">
+              <div style="font-family: var(--font-serif); font-size: 1rem; font-weight: 500;">${item.name}</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.size} • Qty: ${item.quantity}</div>
+            </div>
+            <div style="font-weight: 500; font-size: 0.9rem;">€${itemTotal}</div>
+          </div>
+        `;
+      }).join('');
+
+      subtotalEl.textContent = `€${subtotal}`;
+      totalEl.textContent = `€${subtotal}`;
+
+      document.getElementById('checkout-form')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert(`Order Placed Successfully!\n\nThank you for choosing RG Shop.\nYour order confirmation & DHL Express tracking code will be sent to your email.`);
+        localStorage.removeItem('rg_shop_cart');
+        window.location.href = 'index.html';
+      });
+    });
+  </script>
+</body>
+</html>

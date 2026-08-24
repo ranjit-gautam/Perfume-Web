@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fragrance Details | RG Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .product-page-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding: 3rem 0 5rem 0;
+    }
+    @media (min-width: 900px) {
+      .product-page-layout {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 4.5rem;
+      }
+    }
+    .pdp-gallery-main {
+      background-color: var(--bg-card);
+      aspect-ratio: 1 / 1.15;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      position: relative;
+    }
+    .pdp-gallery-main img {
+      max-height: 480px;
+      object-fit: contain;
+    }
+    .pdp-details-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .pdp-family-tag {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .pdp-title {
+      font-family: var(--font-serif);
+      font-size: 2.75rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      line-height: 1.15;
+    }
+    .pdp-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+    }
+    .pdp-price {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1.75rem;
+    }
+    .size-selector-group {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .size-btn {
+      flex: 1;
+      border: 1px solid var(--border-light);
+      padding: 0.85rem 1rem;
+      text-align: center;
+      font-size: 0.875rem;
+      transition: all var(--transition-fast);
+      cursor: pointer;
+    }
+    .size-btn.active {
+      border-color: var(--text-primary);
+      background-color: var(--text-primary);
+      color: #FFFFFF;
+      font-weight: 500;
+    }
+    .engraving-box {
+      border: 1px dashed var(--border-light);
+      padding: 1rem;
+      margin-bottom: 1.75rem;
+      background-color: var(--bg-subtle);
+    }
+    .engraving-box label {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+    }
+    .engraving-input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid var(--border-light);
+      background: #FFF;
+      font-size: 0.85rem;
+      outline: none;
+    }
+    .spec-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.875rem;
+    }
+    .spec-label {
+      color: var(--text-secondary);
+    }
+    .spec-val {
+      font-weight: 500;
+    }
+    .pdp-cta-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 600px) {
+      .pdp-cta-group {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement -->
+  <div class="top-notice">
+    <span>Complimentary 2ml discovery vials included with every flacon order</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <nav class="nav-left">
+        <a href="index.html" class="nav-link active">Fragrances</a>
+        <a href="collections.html" class="nav-link">Collections</a>
+        <a href="atelier.html" class="nav-link">The Atelier</a>
+      </nav>
+
+      <button type="button" class="icon-btn mobile-menu-btn" id="mobile-menu-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+
+      <a href="index.html" class="site-logo">RG Shop</a>
+
+      <div class="nav-right">
+        <button type="button" class="icon-btn" id="search-trigger-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <button type="button" class="icon-btn" id="cart-trigger-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <path d="M3 6h18"></path>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cart-badge" style="display: none;">0</span>
+        </button>
+
+        <a href="atelier.html#appointment" class="icon-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="product-page-layout" id="pdp-container">
+      <!-- PDP Data dynamically loaded via JS or fallback -->
+    </div>
+
+    <!-- Scent Architecture Pyramid Section -->
+    <section style="padding: 4rem 0; border-top: 1px solid var(--border-light);" id="pdp-architecture">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.25rem; margin-bottom: 0.75rem; font-weight: 500;">
+          Olfactory Structure & Evaporation Arc
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 3rem;">
+          Composed with 28% pure parfum extrait concentration for exceptional skin tenacity.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; text-align: left;">
+          <div style="background: var(--bg-card); padding: 1.75rem; border: 1px solid var(--border-light);">
+            <span style="font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-gold); font-weight: 600; display: block; margin-bottom: 0.5rem;">01. Head (0 - 30 min)</span>
+            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 0.5rem;" id="pdp-head-title">Top Notes</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);" id="pdp-head-desc">Crisp initial projection.</p>
+          </div>
+          <div style="background: var(--bg-card); padding: 1.75rem; border: 1px solid var(--border-light);">
+            <span style="font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-gold); font-weight: 600; display: block; margin-bottom: 0.5rem;">02. Heart (30 min - 4 hrs)</span>
+            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 0.5rem;" id="pdp-heart-title">Heart Accord</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);" id="pdp-heart-desc">The narrative core.</p>
+          </div>
+          <div style="background: var(--bg-card); padding: 1.75rem; border: 1px solid var(--border-light);">
+            <span style="font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-gold); font-weight: 600; display: block; margin-bottom: 0.5rem;">03. Soul (4 - 14 hrs)</span>
+            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 0.5rem;" id="pdp-base-title">Base Resonance</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);" id="pdp-base-desc">Intimate skin sillage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">RG Shop</a>
+          <p class="footer-bio">Crafting olfactory memories through luxury minimalism and heritage.</p>
+          <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.75rem;">
+            Location: Madrid, Spain • Calle de Serrano 48
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="atelier.html">The Atelier</a></li>
+            <li><a href="collections.html">Collections</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links">
+            <li><a href="atelier.html#contact">Contact</a></li>
+            <li><a href="checkout.html">Orders</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Newsletter</h4>
+          <form class="newsletter-form">
+            <div class="newsletter-input-group">
+              <input type="email" class="newsletter-input" placeholder="YOUR EMAIL" required>
+              <button type="submit" class="newsletter-submit-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 RG Shop. Owned by Ranjit Gautam. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Olfactory Selection</h3>
+      <button type="button" class="icon-btn" id="cart-close-btn">✕</button>
+    </div>
+    <div class="cart-items-list" id="cart-items-list"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span class="cart-subtotal-price" id="cart-subtotal-price">€0</span>
+      </div>
+      <a href="checkout.html" class="btn-checkout">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <!-- Search Modal -->
+  <div class="search-modal-overlay" id="search-overlay">
+    <div class="search-modal-container">
+      <div class="search-modal-header">
+        <button type="button" class="icon-btn" id="search-close-btn">✕</button>
+      </div>
+      <div class="search-input-wrapper">
+        <input type="text" class="search-input-field" id="search-input" placeholder="Search fragrances...">
+      </div>
+      <div class="search-results-area">
+        <div class="search-results-grid" id="search-results-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id') || 'averon';
+      const product = window.FRAGRANCES.find(p => p.id === id) || window.FRAGRANCES[0];
+      
+      const container = document.getElementById('pdp-container');
+      let selectedSize = '50ml';
+      let currentPrice = product.price;
+
+      if (container) {
+        container.innerHTML = `
+          <div class="pdp-gallery-main">
+            <img src="${product.image}" alt="${product.name}" id="pdp-main-image" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1000&auto=format&fit=crop';">
+          </div>
+          <div class="pdp-details-col">
+            <span class="pdp-family-tag">${product.family} • ${product.occasion} Occasion</span>
+            <h1 class="pdp-title">${product.name}</h1>
+            <p class="pdp-subtitle">${product.subtitle}</p>
+            <div class="pdp-price" id="pdp-price-display">${product.formattedPrice}</div>
+
+            <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 2rem;">
+              ${product.description}
+            </p>
+
+            <div style="margin-bottom: 0.5rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">
+              Select Flacon Size
+            </div>
+            <div class="size-selector-group">
+              ${product.sizes.map((s, idx) => `
+                <button type="button" class="size-btn ${idx === 0 ? 'active' : ''}" data-size="${s.ml}ml" data-price="${s.price}">
+                  ${s.ml}ml Extrait • €${s.price}
+                </button>
+              `).join('')}
+            </div>
+
+            <div class="engraving-box">
+              <label>Complimentary Bottle Engraving (Max 8 characters)</label>
+              <input type="text" maxlength="8" class="engraving-input" placeholder="e.g. RG 1994" id="engraving-input">
+            </div>
+
+            <div class="pdp-cta-group">
+              <button type="button" class="btn-instant-order" id="pdp-order-now-btn" style="font-size: 0.9rem; padding: 1rem 1.25rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                  <path d="M3 6h18"></path>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Order Now • <span id="pdp-order-price">€${currentPrice}</span></span>
+              </button>
+              <button type="button" class="btn-outline" id="pdp-add-btn" style="font-size: 0.9rem; padding: 1rem 1.25rem; font-weight: 600;">
+                Add to Bag
+              </button>
+            </div>
+
+            <div class="spec-item">
+              <span class="spec-label">Concentration</span>
+              <span class="spec-val">Extrait de Parfum (28%)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Sillage</span>
+              <span class="spec-val">${product.sillage}</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Longevity</span>
+              <span class="spec-val">${product.longevity}</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Atelier Batch</span>
+              <span class="spec-val">Atelier Reserve Batch No. 04/24</span>
+            </div>
+          </div>
+        `;
+
+        // Update Architecture
+        document.getElementById('pdp-head-desc').textContent = product.notes.top.join(', ');
+        document.getElementById('pdp-heart-desc').textContent = product.notes.heart.join(', ');
+        document.getElementById('pdp-base-desc').textContent = product.notes.base.join(', ');
+
+        // Size selector handlers
+        const sizeBtns = container.querySelectorAll('.size-btn');
+        const priceDisplay = document.getElementById('pdp-price-display');
+        const orderPrice = document.getElementById('pdp-order-price');
+
+        sizeBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            sizeBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedSize = btn.dataset.size;
+            currentPrice = btn.dataset.price;
+            if (priceDisplay) priceDisplay.textContent = `€${currentPrice}`;
+            if (orderPrice) orderPrice.textContent = `€${currentPrice}`;
+          });
+        });
+
+        function saveToCart() {
+          const cartState = JSON.parse(localStorage.getItem('rg_shop_cart') || '[]');
+          const engraving = document.getElementById('engraving-input')?.value.trim();
+          
+          const existing = cartState.find(item => item.id === product.id && item.size === selectedSize);
+          if (existing) {
+            existing.quantity += 1;
+          } else {
+            cartState.push({
+              id: product.id,
+              name: product.name,
+              subtitle: product.subtitle,
+              size: selectedSize,
+              price: parseInt(currentPrice),
+              image: product.image,
+              quantity: 1,
+              engraving: engraving || null
+            });
+          }
+          localStorage.setItem('rg_shop_cart', JSON.stringify(cartState));
+        }
+
+        // 1-Click Order Now Button
+        document.getElementById('pdp-order-now-btn')?.addEventListener('click', () => {
+          saveToCart();
+          showToast(`Proceeding to checkout with ${product.name} (${selectedSize})...`);
+          setTimeout(() => {
+            window.location.href = 'checkout.html';
+          }, 450);
+        });
+
+        // Add to Bag
+        document.getElementById('pdp-add-btn')?.addEventListener('click', () => {
+          saveToCart();
+          const cartState = JSON.parse(localStorage.getItem('rg_shop_cart') || '[]');
+          
+          // Trigger cart open
+          const badge = document.getElementById('cart-badge');
+          const totalItems = cartState.reduce((sum, item) => sum + item.quantity, 0);
+          if (badge) {
+            badge.textContent = totalItems;
+            badge.style.display = 'flex';
+          }
+          const drawerOverlay = document.getElementById('cart-drawer-overlay');
+          const drawer = document.getElementById('cart-drawer');
+          if (drawerOverlay && drawer) {
+            drawerOverlay.classList.add('open');
+            drawer.classList.add('open');
+            document.body.style.overflow = 'hidden';
+          }
+          showToast(`Added ${product.name} (${selectedSize}) to bag`);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
